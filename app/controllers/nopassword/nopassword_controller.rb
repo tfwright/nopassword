@@ -7,7 +7,7 @@ module Nopassword
     before_filter :check_valid_session
 
     def send_login_email
-      redirect_to '/' if !request.post?
+      redirect_to '/' and return if !request.post?
       email = request[:email]
       remote_ip = request.remote_ip
       user_agent = request.env["HTTP_USER_AGENT"]
