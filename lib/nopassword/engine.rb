@@ -38,5 +38,8 @@ module Nopassword
         }
       end
     end
+
+    config.from_email = 'nopassword@alexsmolen.com'
+    config.return_email = 'nopassword@alexsmolen.com'
   end
 end
